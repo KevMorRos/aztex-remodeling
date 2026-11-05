@@ -1,0 +1,139 @@
+/* Aztex Remodeling styles */
+
+/* ---------- Colors and fonts ---------- */
+:root{
+  --bg:#242b46;          /* page background */
+  --bg-2:#1f3a5f;        /* photo section background */
+  --ink:#d1d1d1;         /* main text */
+  --ink-soft:#aeafb1;    /* secondary text */
+  --juniper:#1f3a5f;     /* header, footer, selected filter */
+  --on-juniper:#eef0e8;  /* text on --juniper */
+  --tape:#e3b23c;        /* yellow: buttons */
+  --tape-ink:#000000;    /* text on Button(yellow)*/
+  --line:#d3d3c9;        /* borders */
+  --card:#1f3a5f;        /* cards and form */
+  --err-bg:#f6dcd6;      /* error message background */
+  --err-ink:#7a2314;     /* error message text */
+
+  --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tape);outline-offset:2px}
+
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;line-height:1;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,4.5vw,3rem);font-weight:800}
+.sub{color:var(--ink-soft);max-width:36em;margin:12px 0 0}
+
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px}
+section{padding-block:56px}
+
+.btn{display:inline-block;background:var(--tape);color:var(--tape-ink);font-family:var(--display);font-weight:700;text-transform:uppercase;
+  letter-spacing:.04em;font-size:1.05rem;padding:10px 20px;border:0;border-radius:3px;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.05)}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:5;background:var(--juniper);color:var(--on-juniper)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:800;font-size:1.4rem;text-transform:uppercase;text-decoration:none;letter-spacing:.02em}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:.92rem;flex-wrap:wrap}
+.nav-links a:not(.btn){text-decoration:none;opacity:.88}
+.nav-links a:not(.btn):hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+header .btn{padding:7px 14px;font-size:.95rem}
+@media (max-width:640px){.nav-links a:not(.btn){display:none}}
+
+/* ---------- Hero ---------- */
+.hero{padding-block:72px 64px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:800;max-width:12em}
+.hero p{font-size:1.15rem;color:var(--ink-soft);max-width:34em;margin:18px 0 28px}
+.hero-actions{display:flex;gap:16px 20px;flex-wrap:wrap;align-items:center}
+.phone{font-weight:600;text-decoration:none;border-bottom:2px solid var(--tape)}
+.phone:hover{border-bottom-color:var(--ink)}
+
+/* ---------- Services ---------- */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+@media (max-width:860px){.services{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.services{grid-template-columns:1fr}}
+.svc{display:flex;flex-direction:column;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:20px;
+  text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.svc:hover{border-color:var(--ink);transform:translateY(-2px)}
+.svc h3{font-size:1.45rem;margin-bottom:6px}
+.svc p{flex:1;margin:0;color:var(--ink-soft);font-size:.95rem}
+.see{margin-top:14px;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem}
+.see span{display:inline-block;transition:transform .15s}
+.svc:hover .see span{transform:translateX(3px)}
+
+/* ---------- Photos ---------- */
+.work-band{background:var(--bg-2);scroll-margin-top:60px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font:inherit;font-size:.9rem;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--juniper);color:var(--on-juniper);border-color:var(--juniper)}
+.chip .n{opacity:.6;margin-left:4px}
+.bin{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}
+@media (max-width:860px){.bin{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.bin{grid-template-columns:1fr 1fr}}
+.photo{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;background:var(--card);border:0;padding:0;cursor:zoom-in}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.photo:hover img{transform:scale(1.03)}
+.tag{position:absolute;left:8px;bottom:8px;background:var(--juniper);color:var(--on-juniper);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:2px}
+.empty{grid-column:1/-1;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:28px 20px;text-align:center;color:var(--ink-soft);margin:0}
+.empty a{color:var(--ink);font-weight:600}
+
+/* Photo viewer (full-screen) */
+.lightbox{position:fixed;inset:0;z-index:20;padding:16px;background:rgba(10,14,12,.92);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.lightbox img{max-height:78vh;object-fit:contain;border-radius:3px}
+.lightbox p{color:#eef0e8;margin:0;text-align:center}
+.lb-btn{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:3px;font-size:1.4rem;width:44px;height:44px;cursor:pointer}
+.lb-close{top:12px;right:12px}
+.lb-prev{left:12px;top:50%}
+.lb-next{right:12px;top:50%}
+
+/* ---------- Service area ---------- */
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0;padding:0;list-style:none}
+.towns li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.92rem}
+
+/* ---------- Contact and form ---------- */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
+.contact>*{min-width:0}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+.lines{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.lines div{display:flex;flex-direction:column}
+.k{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft)}
+.v{font-weight:600;font-size:1.15rem;text-decoration:none}
+.v:hover{text-decoration:underline}
+
+form{position:relative;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:520px){form{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+label{font-size:.82rem;font-weight:600}
+input,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:10px 12px;width:100%}
+input:focus,textarea:focus{outline:2px solid var(--juniper);outline-offset:0;border-color:var(--juniper)}
+input::placeholder,textarea::placeholder{color:var(--ink-soft);opacity:.75}
+textarea{min-height:120px;resize:vertical}
+#est-submit{justify-self:start}
+#est-submit:disabled{opacity:.6;cursor:wait}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}   /* hidden spam-trap field */
+.status{grid-column:1/-1;margin:0;padding:12px 14px;border-radius:3px;font-weight:600}
+.status.ok{background:var(--tape);color:var(--tape-ink)}
+.status.err{background:var(--err-bg);color:var(--err-ink)}
+
+/* ---------- Footer ---------- */
+footer{background:var(--juniper);color:var(--on-juniper);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* Turn off animations for visitors who've asked their device to reduce motion */
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+  html{scroll-behavior:auto}
+}

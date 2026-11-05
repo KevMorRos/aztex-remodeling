@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aztex Remodeling | Home Remodeling in Round Rock &amp; Austin, TX</title>
+  <meta name="description" content="Aztex Remodeling is a local general contractor serving Round Rock, Austin and nearby. Kitchens, bathrooms, whole-house renovations, drywall and painting. Call (737) 356-1239 for a free estimate.">
+  <meta name="theme-color" content="#2f4a3a">
+
+  <!-- How the link looks when shared in texts and social media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aztex Remodeling | Round Rock &amp; Austin, TX">
+  <meta property="og:description" content="Kitchens, bathrooms, whole-house renovations, drywall and painting. Free estimates.">
+
+  <!-- Browser tab icon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231f3a5f'/%3E%3Cpath d='M6 16 16 7l10 9M9 14v11h14V14' fill='none' stroke='%23eef0e8' stroke-width='2.4'/%3E%3Crect x='13.5' y='18' width='5' height='7' fill='%23e3b23c'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Public+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Business details for Google search results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Aztex Remodeling",
+    "telephone": "+1-737-356-1239",
+    "address": { "@type": "PostalAddress", "addressLocality": "Round Rock", "addressRegion": "TX", "addressCountry": "US" },
+    "areaServed": ["Round Rock", "Austin", "Georgetown", "Pflugerville", "Cedar Park", "Leander", "Hutto", "Taylor", "Liberty Hill", "Manor"]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Aztex Remodeling</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#work">Photos</a>
+      <a href="#area">Service area</a>
+      <a class="btn" href="#contact">Free estimate</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1>Home remodeling in Round Rock &amp; Austin</h1>
+      <p>Kitchens, bathrooms, whole-house renovations, drywall and painting from a local general contractor. Clear pricing and a crew that treats your home with care.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Request a free estimate</a>
+        <span>or call <a class="phone" href="tel:+17373561239">(737) 356-1239</a></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>Services</h2>
+      <div class="services">
+        <a class="svc" href="#work" data-service="kitchen"><h3>Kitchens</h3><p>New cabinets, countertops and layouts, or a refresh of what you have.</p><span class="see">See photos <span>→</span></span></a>
+        <a class="svc" href="#work" data-service="bath"><h3>Bathrooms</h3><p>Tile showers, tub-to-shower conversions, vanities and accessible baths.</p><span class="see">See photos <span>→</span></span></a>
+        <a class="svc" href="#work" data-service="whole"><h3>Whole-house renovation</h3><p>Full restorations of damaged or outdated homes, from roof and framing to finished rooms. Ready to live in or list.</p><span class="see">See photos <span>→</span></span></a>
+        <a class="svc" href="#work" data-service="drywall"><h3>Drywall &amp; texture</h3><p>Hanging, taping, mudding and texture for a single room or an entire house.</p><span class="see">See photos <span>→</span></span></a>
+        <a class="svc" href="#work" data-service="paint"><h3>Interior &amp; exterior painting</h3><p>Walls, ceilings, trim, cabinets and exteriors, with careful prep.</p><span class="see">See photos <span>→</span></span></a>
+        <a class="svc" href="#work" data-service="addition"><h3>Room additions</h3><p>Bedrooms, primary suites and sunrooms that match the rest of the house.</p><span class="see">See photos <span>→</span></span></a>
+        <a class="svc" href="#work" data-service="patio"><h3>Patios &amp; decks</h3><p>Covered patios, pergolas and decks built for Texas summers.</p><span class="see">See photos <span>→</span></span></a>
+        <a class="svc" href="#work" data-service="floor"><h3>Flooring &amp; repairs</h3><p>Flooring installs, drywall, trim, doors and water-damage repair.</p><span class="see">See photos <span>→</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="work-band">
+    <div class="wrap">
+      <h2>Photos of our work</h2>
+      <p class="sub">Real jobs around Round Rock and Austin. Pick a service to narrow it down, or tap a photo to see it larger.</p>
+      <div class="filters" id="filters" role="group" aria-label="Filter photos by service"></div>
+      <div class="bin" id="bin"></div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-btn lb-close" id="lb-close" aria-label="Close">×</button>
+    <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous photo">‹</button>
+    <img id="lb-img" alt="">
+    <p id="lb-cap"></p>
+    <button class="lb-btn lb-next" id="lb-next" aria-label="Next photo">›</button>
+  </div>
+
+  <section id="area">
+    <div class="wrap">
+      <h2>Service area</h2>
+      <p class="sub">Based in Round Rock and serving Austin and the surrounding area. Don't see your town? Give us a call.</p>
+      <ul class="towns">
+        <li>Round Rock</li><li>Austin</li><li>Georgetown</li><li>Pflugerville</li><li>Cedar Park</li>
+        <li>Leander</li><li>Hutto</li><li>Taylor</li><li>Liberty Hill</li><li>Manor</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Get a free estimate</h2>
+        <p class="sub">Tell us about your project and we'll get back to you within one business day.</p>
+        <div class="lines">
+          <div><span class="k">Call or text</span><a class="v" href="tel:+17373561239">(737) 356-1239</a></div>
+        </div>
+      </div>
+
+      <!-- The form sends to /api/estimate on our own server (built in the backend step) -->
+      <form id="est-form" action="/api/estimate" method="post">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required maxlength="100"></div>
+        <div class="field"><label for="f-phone">Phone number</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required maxlength="30"></div>
+        <div class="field full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200"></div>
+        <div class="field full"><label for="f-address">Address</label><input id="f-address" name="address" autocomplete="street-address" required maxlength="200" placeholder="Street, city, ZIP"></div>
+        <div class="field full"><label for="f-msg">About the project</label>
+          <textarea id="f-msg" name="message" required maxlength="3000" placeholder="What would you like done? Include rough size, timing, or anything else that helps."></textarea></div>
+
+        <!-- Spam trap: hidden from people, bots tend to fill it in. The server ignores submissions where it has a value. -->
+        <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
+
+        <button class="btn" type="submit" id="est-submit">Send request</button>
+        <p class="status ok" id="form-ok" hidden role="status">Thanks! Your request was sent. We'll be in touch within one business day.</p>
+        <p class="status err" id="form-err" hidden role="alert">Something went wrong sending your request. Please try again, or call us at (737) 356-1239.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Aztex Remodeling · Round Rock, Texas</span>
+    <span><a href="tel:+17373561239">(737) 356-1239</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+// Only used if you deploy with Cloudflare Workers instead of Pages.
+// Tells Cloudflare to serve the files in the public/ folder.
+{
+  "name": "aztex-remodeling",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./public" }
+}

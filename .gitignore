@@ -1,0 +1,15 @@
+# Secrets: never commit these
+.env
+.env.*
+
+# Installed packages (recreated with npm install)
+node_modules/
+
+# Original full-size photos (only processed web-size photos go in public/photos)
+photos-original/
+
+# Cloudflare / editor / system files
+.wrangler/
+.vscode/
+.DS_Store
+Thumbs.db
